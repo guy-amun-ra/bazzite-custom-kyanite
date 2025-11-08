@@ -5,6 +5,9 @@ COPY build_files /
 # Base Image
 FROM ghcr.io/ublue-os/bazzite-gnome:stable
 
+# Add PLATFORM_ID to /etc/os-release to fix the build error
+RUN echo 'PLATFORM_ID="platform:el9"' >> /etc/os-release
+
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
 # FROM ghcr.io/ublue-os/bluefin-nvidia:stable
