@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite-gnome:bazzite-42
+FROM ghcr.io/ublue-os/bazzite-gnome:bazzite-41
 
 # Add PLATFORM_ID to /etc/os-release to fix the build error
 # RUN echo 'PLATFORM_ID="platform:el9"' >> /etc/os-release
